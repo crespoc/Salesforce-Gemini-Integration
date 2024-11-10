@@ -1,0 +1,12 @@
+<template>
+    <template for:each={accounts} for:item="account">
+        <div key={account.id}>
+            <p>{account.name} - {account.status}</p>
+            <lightning-button
+                label="Deactivate"
+                onclick={handleButtonClick}
+                data-id={account.id}
+            ></lightning-button>
+        </div>
+    </template>
+</template>

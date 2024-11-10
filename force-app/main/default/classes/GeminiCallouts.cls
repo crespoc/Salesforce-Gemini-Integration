@@ -1,6 +1,5 @@
 public class GeminiCallouts {
     public static final String apiKey;
-
     static {
         API_Keys__c CS = API_Keys__c.getOrgDefaults();
         apiKey = CS.API_Key_Value__c;
