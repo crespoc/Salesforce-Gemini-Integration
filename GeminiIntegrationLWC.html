@@ -1,0 +1,21 @@
+<template>
+    <template lwc:if={showSpinner}>
+        <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+    </template>
+    <lightning-card title="Get response from Gemini AI">
+        <div class="slds-grid slds-grid_vertical">
+            <div class="slds-col slds-m-around_medium">
+                <lightning-textarea lwc:ref="inputFromUser" label="Enter your question?" required></lightning-textarea>
+            </div>
+            <div class="slds-col slds-m-around_medium">
+                <lightning-button label="Get Answer" slot="actions" onclick={handleClick}></lightning-button>
+            </div>
+        </div>
+
+        <template lwc:if={responsePresent}>
+            <div class="slds-m-around_medium">
+                <lightning-textarea style="--sds-c-textarea-sizing-min-height:225px" lwc:ref="textAreaResult" label="Gemini's Answer" value="" disabled=""></lightning-textarea>
+            </div>
+        </template>
+    </lightning-card>
+</template>
