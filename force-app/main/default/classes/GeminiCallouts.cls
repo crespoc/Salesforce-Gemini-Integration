@@ -4,7 +4,6 @@ public class GeminiCallouts {
         API_Keys__c CS = API_Keys__c.getOrgDefaults();
         apiKey = CS.API_Key_Value__c;
     }
-
     @AuraEnabled
     public static String makePostRequest(String inputFromUser) {
         Http http = new Http();

@@ -21,7 +21,6 @@ export default class GeminiIntegrationLWC extends LightningElement {
             this.showSpinner = false
         }
     }
-
     handleResponseGemini(resp) {
         let parsedResponse = JSON.parse(resp)
         setTimeout(()=>{
